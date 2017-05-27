@@ -5,7 +5,7 @@ using Prism;
 using Prism.Unity;
 using Prism.Modularity;
 using Microsoft.Practices.Unity;
-using Etnath.Utilities.Prism;
+using Etnath.Utilities.Prism.Test.Infrastructure;
 
 namespace Etnath.Utilities.Prism.Test
 {
@@ -34,25 +34,5 @@ namespace Etnath.Utilities.Prism.Test
         }
     }
 
-    public class TestBootstrapper : UnityBootstrapper
-    {
-
-        protected override void ConfigureModuleCatalog()
-        {
-            base.ConfigureModuleCatalog();
-            ModuleCatalog.AddModule(new ModuleInfo(
-                typeof(UnityModule).Name,
-                typeof(UnityModule).AssemblyQualifiedName));
-        }
-
-        protected override DependencyObject CreateShell()
-        {
-            return Container.Resolve<Shell>();
-        }
-
-        protected override void InitializeShell()
-        {
-            base.InitializeShell();       
-        }
-    }
+    
 }

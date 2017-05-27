@@ -16,7 +16,7 @@ namespace Etnath.Utilities.Prism
 
         public static IUnityContainer RegisterTypeForNavigation<T>(this IUnityContainer container) where T : class, IView, IViewModel
         {
-            return container.RegisterType<object, T>();
+            return container.RegisterType<object, T>(typeof(T).FullName);
         }
     }
 }

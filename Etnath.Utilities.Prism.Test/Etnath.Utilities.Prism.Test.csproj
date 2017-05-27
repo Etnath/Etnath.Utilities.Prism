@@ -88,9 +88,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Shell.xaml.cs">
+    <Compile Include="Infrastructure\Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\TestBootstrapper.cs" />
     <Compile Include="UnityModuleTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -104,7 +105,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Shell.xaml">
+    <Page Include="Infrastructure\Shell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
